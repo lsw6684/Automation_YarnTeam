@@ -5,3 +5,4 @@ for Data Collection Automation
 - pip install xlrd
 - pip install openpyxl
 - pip install pandas
+- pip install pymssql

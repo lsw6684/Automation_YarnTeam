@@ -1,7 +1,7 @@
 import pandas as pd
+from test_csv import extract_data
+from db import input_data
 
-xlsx = pd.read_excel('./../files/title.csv') # nrows : 가져올 row 수, skiprows : sip할 row 수
+print(input_data())
 
-Sub1_list = xlsx.iloc[2:, 1].values.tolist()
-print(xlsx)
-print(Sub1_list)
+print(extract_data())
