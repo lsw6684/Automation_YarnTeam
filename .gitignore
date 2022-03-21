@@ -1,2 +1,2 @@
 *.pyc
-secret.py
+db_info.py

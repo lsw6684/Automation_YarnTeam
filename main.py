@@ -1,4 +1,4 @@
-from test_csv import extract_data
+from csv import extract_data
 from db import input_data
 
 name = 'claim_sort'
