@@ -1,16 +1,22 @@
 import pymssql
-import secret
+import db_info
+def input_data(table_name, column_data):
 
-def input_data(sql):
+    # SQL로 전환
+    sql =  'INSERT INTO ' + table_name + 'VALUES ('
+    for i in column_data:
+        sql += "'" + i + "',"
+    sql = sql[:-1] + ')'
+
     # DB 서버 주소
-    server = secret.server_address
+    server = db_info.server_address
 
     # DB 이름
-    database = secret.db_name
+    database = db_info.db_name
 
     # 접속 ID, PW
-    username = secret.username
-    password = secret.password
+    username = db_info.username
+    password = db_info.password
 
     # MSSQL 접속
     connected_db =  pymssql.connect(server , username, password, database, charset='EUC-KR') # 
